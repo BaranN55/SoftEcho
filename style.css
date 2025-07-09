@@ -21,3 +21,32 @@ body {
     height: 1080px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   }
+
+  @font-face {
+  font-family: 'TDTD';
+  src: url('../assets/font.ttf') format('truetype');
+}
+
+body {
+  font-family: 'TDTD', sans-serif;
+}
+
+body {
+  font-size: 30px; 
+  font-weight: 900;
+}
+
+h1 {
+  color: #f9f7ff;
+  margin-top: 100px;
+  font-size: 60px;
+  text-align: center;
+
+  /* Add text outline */
+  text-shadow:
+    -2px -2px 0 #3f3568,
+     2px -2px 0 #3f3568,
+    -2px  2px 0 #3f3568,
+     2px  2px 0 #3f3568;
+}
+
