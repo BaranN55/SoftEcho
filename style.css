@@ -1,3 +1,8 @@
+ @font-face {
+  font-family: 'TDTD';
+  src: url('../assets/font.ttf') format('truetype');
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -9,8 +14,6 @@ body {
     background-size: cover;         
     background-repeat: no-repeat;   
     background-position: center;    
-    height: 100vh;                  
-    margin: 0;
     font-family: 'TDTD', sans-serif;
     font-size: 30px; 
     font-weight: 900;
@@ -22,10 +25,6 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   }
 
-  @font-face {
-  font-family: 'TDTD';
-  src: url('../assets/font.ttf') format('truetype');
-}
 
 
 h1 {
@@ -58,11 +57,10 @@ h1 {
 }
 
 .logo-img {
-  width: 150px;
-  height: 80px;
-  object-fit: contain; /* prevents distortion */
+  width: 120px;
+  height: 120px;
   position: absolute;
-  top: 1px; /* distance from top */
-  left: 0.0005px; /* distance from left */
-  z-index: 11; /* make sure it's above other elements */
+  top: -18px; /* negative value moves it up */
+  left: 0.0005px;
+  z-index: 11;
 }
