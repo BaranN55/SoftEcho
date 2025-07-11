@@ -79,5 +79,13 @@ h1 {
 .nav-menu {
   display: flex;
   gap: 200px; /* increased from 30px - change this value for more/less separation */
-   justify-content: center; /* centers the navigation menu */
+   justify-content
+   : center; /* centers the navigation menu */
 }
+ 
+.nav-link:hover {
+  color: #3f3568; /* Changes to the darker purple when hovered */
+}
+
+/*_______________________________________/
+
