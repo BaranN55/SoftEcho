@@ -103,3 +103,87 @@ body {
 .nav-link:hover {
   color: #3f3568;
 }
+
+.character-container {
+  position: absolute;
+  bottom: 100px;
+  left: -100px;
+  width: 80px;
+  height: 80px;
+  z-index: 5;
+}
+
+/* Character using your PNG image */
+.character {
+  width: 113px;
+  height: 150px;
+  background-image: url('../assets/character1.png'); /* Replace 'character.png' with your actual filename */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  animation: walk-across 15s linear infinite, bob 0.6s ease-in-out infinite;
+}
+
+/* Alternative: If you want to flip the character when walking */
+.character.facing-right {
+  transform: scaleX(-1);
+}
+
+/* Walking animation - moves across screen */
+@keyframes walk-across {
+  0% {
+      left: -100px;
+  }
+  100% {
+      left: calc(100vw + 100px);
+  }
+}
+
+/* Bobbing animation for realistic walking */
+@keyframes bob {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-5px);
+  }
+}
+
+/* Custom path for cafe environment */
+.character-path {
+  position: absolute;
+  bottom: 150px;
+  left: -100px;
+  width: 80px;
+  height: 80px;
+  z-index: 5;
+  animation: cafe-path 25s linear infinite;
+}
+
+@keyframes cafe-path {
+  0% {
+      left: -100px;
+      bottom: 150px;
+  }
+  20% {
+      left: 300px;
+      bottom: 150px;
+  }
+  40% {
+      left: 300px;
+      bottom: 250px;
+  }
+  60% {
+      left: 700px;
+      bottom: 250px;
+  }
+  80% {
+      left: 700px;
+      bottom: 150px;
+  }
+  100% {
+      left: calc(100vw + 100px);
+      bottom: 150px;
+  }
+}
