@@ -106,8 +106,9 @@ body {
 
 .character-container {
   position: absolute;
-  bottom: 100px;
-  left: -100px;
+  top: 100px;
+  left: 46%;
+  transform: translateX(-50%);
   width: 80px;
   height: 80px;
   z-index: 5;
@@ -122,7 +123,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  animation: walk-across 15s linear infinite, bob 0.6s ease-in-out infinite;
+  animation: walk-down 15s linear infinite, bob 0.6s ease-in-out infinite;
 }
 
 /* Alternative: If you want to flip the character when walking */
@@ -130,13 +131,13 @@ body {
   transform: scaleX(-1);
 }
 
-/* Walking animation - moves across screen */
-@keyframes walk-across {
+/* Walking animation - moves from top to center of page */
+@keyframes walk-down {
   0% {
-      left: -100px;
+      top: 100px;
   }
   100% {
-      left: calc(100vw + 100px);
+      top: calc(50vh - 75px); /* Stops at center of viewport (50vh minus half character height) */
   }
 }
 
@@ -150,40 +151,41 @@ body {
   }
 }
 
-/* Custom path for cafe environment */
+/* Custom path for cafe environment - vertical movement */
 .character-path {
   position: absolute;
-  bottom: 150px;
-  left: -100px;
+  top: 100px;
+  left: 46%;
+  transform: translateX(-50%);
   width: 80px;
   height: 80px;
   z-index: 5;
-  animation: cafe-path 25s linear infinite;
+  animation: cafe-path-vertical 25s linear infinite;
 }
 
-@keyframes cafe-path {
+@keyframes cafe-path-vertical {
   0% {
-      left: -100px;
-      bottom: 150px;
+      top: 100px;
+      left: 46%;
   }
   20% {
-      left: 300px;
-      bottom: 150px;
+      top: 150px;
+      left: 26%;
   }
   40% {
-      left: 300px;
-      bottom: 250px;
+      top: 200px;
+      left: 66%;
   }
   60% {
-      left: 700px;
-      bottom: 250px;
+      top: 250px;
+      left: 36%;
   }
   80% {
-      left: 700px;
-      bottom: 150px;
+      top: 300px;
+      left: 56%;
   }
   100% {
-      left: calc(100vw + 100px);
-      bottom: 150px;
+      top: calc(50vh - 75px); /* Stops at center of viewport */
+      left: 46%;
   }
 }
